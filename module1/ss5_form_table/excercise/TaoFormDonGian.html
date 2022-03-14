@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT 1</title>
+    <style>
+        p{
+            color: blue;
+            text-align: right;
+            width: 100px;
+        }
+        .abc{
+            font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <fieldset style="background-color: aquamarine">
+        <form method="get" action="TaoFormDonGian.html" class="abc">
+            <table style="margin-left:30%;background-color: aliceblue" width="500px" >
+                <tr>
+                    <th style="background-color: red" colspan="2"><h2 style="color: aliceblue">SỞ THÍCH CỦA BẠN</h2></th>
+                </tr>
+                <tr>
+                    <td><p>Họ và tên</p></td>
+                    <td><input type="text" name="yourname" size="25"/></td>
+                </tr>
+                <tr>
+                    <td><p>Email</p></td>
+                    <td><input type="text" name="email" size="20"/></td>
+                </tr>
+                <tr>
+                    <td><p>Sở thích</p></td>
+                    <td>
+                        <input type="checkbox" name="hobby">Thể thao
+                        <input type="checkbox" name="hobby">Âm nhạc
+                        <input type="checkbox" name="hobby">Đọc sách
+                        <input type="checkbox" name="hobby">Chơi game
+                        <input type="checkbox" name="hobby">Lướt web
+                        <input type="checkbox" name="hobby">Xem phim
+                        <input type="checkbox" name="hobby">Du lịch
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        <input type="submit" value="Gửi thông tin"/>
+                        <input type="reset" value="Nhập lại"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <form method="get" action="TaoFormDonGian.html" class="abc">
+            <table  style="margin-left: 30%;background-color: khaki" width="500px">
+                <tr>
+                    <th style="background-color: aqua" colspan="2"><h2 style="color: blue">ĐĂNG KÝ HỌC VIÊN</h2></th>
+                </tr>
+                <tr>
+                    <td><p>Họ và tên</p></td>
+                    <td><input type="text" name="name" size="25"></td>
+                </tr>
+                <tr>
+                    <td><p>Ngày sinh</p></td>
+                    <td><input type="date" name="birthday"/></td>
+                </tr>
+                <tr>
+                    <td><p>Giới tính</p></td>
+                    <td><input type="radio" name="gender"/>Nam
+                        <input type="radio" name="gender"/>Nữ</td>
+                </tr>
+                <tr>
+                    <td><p>Địa chỉ</p></td>
+                    <td><textarea rows="4" cols="30" name="address"></textarea></td>
+                </tr>
+                <tr>
+                    <td><p>Lớp</p></td>
+                    <td><select name="class" >
+                        <option value=" " selected>-Chọn lớp-</option>
+                        <option value="A0222I1">A0222I1</option>
+                        <option value="A0222I2">A0222I2</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><p>Email</p></td>
+                    <td><input type="text" name="mail" size="20"/></td>
+                </tr>
+                <tr>
+                    <td><p>Điện thoại</p></td>
+                    <td><input type="text" name="phone" size="20"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        <input type="submit" value="Đăng ký"/>
+                        <input type="reset" value="Nhập lại"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</body>
+</html>
