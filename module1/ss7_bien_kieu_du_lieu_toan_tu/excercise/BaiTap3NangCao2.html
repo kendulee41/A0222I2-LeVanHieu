@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính</title>
+<!--    Chưa làm xong-->
+    <style>
+        button{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4"><input type="text" readonly value="0" style="width: 410px" id="input"></td>
+        </tr>
+        <tr>
+            <td><button onclick="play(1)">(</button></td>
+            <td><button onclick="play(2)">)</button></td>
+            <td><button onclick="play(3)">%</button></td>
+            <td><button onclick="play(4)">AC</button></td>
+        </tr>
+        <tr>
+            <td><button>7</button></td>
+            <td><button>8</button></td>
+            <td><button>9</button></td>
+            <td><button>+</button></td>
+        </tr>
+        <tr>
+            <td><button>4</button></td>
+            <td><button>5</button></td>
+            <td><button>6</button></td>
+            <td><button>x</button></td>
+        </tr>
+        <tr>
+            <td><button>1</button></td>
+            <td><button>2</button></td>
+            <td><button>3</button></td>
+            <td><button>-</button></td>
+        </tr>
+        <tr>
+            <td><button>0</button></td>
+            <td><button>.</button></td>
+            <td><button style="background-color: blue" onclick="play(0)">=</button></td>
+            <td><button>+</button></td>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+    function play(t) {
+        let cal = document.getElementById('input').value;
+        if (t==1){
+            cal = cal + "(";
+            document.getElementById('input').value = cal;
+        }
+        if (t==2){
+            cal = cal + ")";
+            document.getElementById('input').value = cal;
+        }
+
+    }
+</script>

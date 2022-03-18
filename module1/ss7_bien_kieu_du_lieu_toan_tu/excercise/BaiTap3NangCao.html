@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính</title>
+</head>
+<body>
+<h1>Calculator</h1>
+<form>
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="nb1">
+                <input type="text" id="nb2">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="cal(1);">Addition(+)</button>
+                <button type="button" onclick="cal(2);">Subtraction(-)</button>
+                <button type="button" onclick="cal(3);">Multiplication(X)</button>
+                <button type="button" onclick="cal(4);">Division(/)</button>
+            </td>
+        </tr>
+
+    </table>
+</form>
+<p id="play"></p>
+</body>
+</html>
+<script>
+    function cal(t) {
+        let number1 = document.getElementById('nb1').value;
+        let number2 = document.getElementById('nb2').value;
+        let count;
+        if (t==1){
+            number1 = parseInt(number1);
+            number2 = parseInt(number2);
+            count = number1 + number2;
+            document.getElementById('play').innerText= 'Result Addition: '+count;
+        }
+        if (t==2){
+            number1 = parseInt(number1);
+            number2 = parseInt(number2);
+            count = number1 - number2;
+            document.getElementById('play').innerText= 'Result Subtraction: '+count;
+        }
+        if (t==3){
+            number1 = parseInt(number1);
+            number2 = parseInt(number2);
+            count = number1 * number2;
+            document.getElementById('play').innerText= 'Result Multiplication: '+count;
+        }
+        if (t==4){
+            number1 = parseInt(number1);
+            number2 = parseInt(number2);
+            count = number1 / number2;
+            document.getElementById('play').innerText= 'Result Division: '+count;
+        }
+    }
+</script>
