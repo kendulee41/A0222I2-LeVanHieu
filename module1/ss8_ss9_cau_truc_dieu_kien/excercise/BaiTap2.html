@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The number of days in the month</title>
+    <style>
+        select{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <select id="month">
+            <option selected>Tháng 1</option>
+            <option>Tháng 2</option>
+            <option>Tháng 3</option>
+            <option>Tháng 4</option>
+            <option>Tháng 5</option>
+            <option>Tháng 6</option>
+            <option>Tháng 7</option>
+            <option>Tháng 8</option>
+            <option>Tháng 9</option>
+            <option>Tháng 10</option>
+            <option>Tháng 11</option>
+            <option>Tháng 12</option>
+        </select>
+        <input type="button" value="Tính số ngày" onclick="calDay();"/>
+    </form>
+    <b id="play"></b>
+    <script>
+        function calDay() {
+            let month = document.getElementById("month").value;
+            switch (month) {
+                case "Tháng 1" :
+                case "Tháng 3" :
+                case "Tháng 5" :
+                case "Tháng 7" :
+                case "Tháng 8" :
+                case "Tháng 10" :
+                case "Tháng 12" :
+                    document.getElementById("play").innerHTML =month+" có 31 ngày";break;
+                case "Tháng 2" :
+                    document.getElementById("play").innerHTML =month+" có 28 ngày hoặc 29 ngày";break;
+                default :
+                    document.getElementById("play").innerHTML =month+" có 30 ngày";
+            }
+        }
+    </script>
+</body>
+</html>
