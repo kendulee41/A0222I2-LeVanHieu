@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Hoa Hồng</title>
+</head>
+<body>
+    <form>
+        <p>Nhập doanh số bán hàng:</p>
+        <input type="text" id="sales"/>
+        <input type="button" value="Tính hoa hồng" onclick="play();"/>
+        <p id="result"></p>
+    </form>
+<script>
+
+    function play() {
+        let sales = parseInt(document.getElementById('sales').value);
+        let coefficient;
+        if (sales >= 500000000) {
+            coefficient = 0.07;
+        } else if (sales >= 200000000) {
+            coefficient = 0.05;
+        } else if (sales >= 100000000) {
+            coefficient = 0.03;
+        } else if (sales >= 50000000) {
+            coefficient = 0.01
+        } else {
+            coefficient = 0;
+        }
+        let money = coefficient * sales;
+        document.getElementById('result').innerHTML = 'Hoa hồng của bạn là: ' + money + ' $';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp Hạng Học lực</title>
+</head>
+<body>
+    <script>
+        let test = parseInt(prompt('Enter test scores:'));
+        let midterm = parseInt(prompt('Enter midterm test scores:'));
+        let final = parseInt(prompt('Enter final test scores:'));
+        let sum = (test+midterm*2+final*3)/6;
+        if ( sum>=8){
+            alert("Giỏi");
+        } else if (sum>=7){
+            alert('Khá');
+        }else if (sum>=5){
+            alert('Trung Bình')
+        }else if (sum<3){
+            alert('Yếu');
+        }
+    </script>
+</body>
+</html>

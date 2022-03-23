@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính cơ bản</title>
+    <style>
+        input{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1" style="border-color: black;">
+        <tr>
+            <td colspan="4"><input type="text" readonly style="width: 410px;text-align: right" id="input" value="0"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="play(1)" value="1"/></td>
+            <td><input type="button"  onclick="play(2)" value="2"/></td>
+            <td><input type="button"  onclick="play(3)" value="3"/></td>
+            <td><input type="button"  onclick="play('add')" value="+"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="play(4)" value="4"/></td>
+            <td><input type="button" onclick="play(5)" value="5"/></td>
+            <td><input type="button" onclick="play(6)" value="6"/></td>
+            <td><input type="button" onclick="play('sub')" value="-"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="play(7)" value="7"/></td>
+            <td><input type="button" onclick="play(8)" value="8"/></td>
+            <td><input type="button" onclick="play(9)" value="9"/></td>
+            <td><input type="button" onclick="play('mul')" value="*"/></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="play('clear')" value="C"/></td>
+            <td><input type="button" onclick="play(0)" value="0"/></td>
+            <td><input type="button" style="background-color: blue" onclick="play('run');" value="="/></td>
+            <td><input type="button" onclick="play('div')" value="/"/></td>
+        </tr>
+    </table>
+    <script>
+        let cal = document.getElementById('input').value;
+        cal = "";
+        function play(t) {
+            switch (t) {
+                case 1 : cal = cal + "1";document.getElementById('input').value = cal;break;
+                case 2 : cal = cal + "2";document.getElementById('input').value = cal;break;
+                case 3 : cal = cal + "3";document.getElementById('input').value = cal;break;
+                case 4 : cal = cal + "4";document.getElementById('input').value = cal;break;
+                case 5 : cal = cal + "5";document.getElementById('input').value = cal;break;
+                case 6 : cal = cal + "6";document.getElementById('input').value = cal;break;
+                case 7 : cal = cal + "7";document.getElementById('input').value = cal;break;
+                case 8 : cal = cal + "8";document.getElementById('input').value = cal;break;
+                case 9 : cal = cal + "9";document.getElementById('input').value = cal;break;
+                case 0 : cal = cal + "0";document.getElementById('input').value = cal;break;
+                case 'add' : cal = cal + "+";document.getElementById('input').value = cal;break;
+                case 'sub' : cal = cal + "-";document.getElementById('input').value = cal;break;
+                case 'mul' : cal = cal + "*";document.getElementById('input').value = cal;break;
+                case 'div' : cal = cal + "/";document.getElementById('input').value = cal;break;
+                case 'clear' : cal = 0;document.getElementById('input').value = cal;break;
+                case 'run' : cal=eval(cal);document.getElementById('input').value=cal;
+            }
+
+        }
+    </script>
+</body>
+</html>

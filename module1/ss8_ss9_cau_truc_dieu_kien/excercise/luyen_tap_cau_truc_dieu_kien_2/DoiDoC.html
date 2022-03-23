@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ĐỔi độ C sang độ F</title>
+</head>
+<body>
+    <form>
+        <p >Nhập độ C:</p>
+        <input type="text" id="celsius"/>
+        <input type="button" value="Đổi" onclick="play();"/>
+        <p id="result" ></p>
+
+    </form>
+<script>
+    function play(){
+    let celsius = parseInt(document.getElementById('celsius').value);
+    let t = celsius /1;
+    if (t==celsius){
+        let f = (9*celsius)/5+32;
+        document.getElementById('result').innerHTML = f + " độ F";
+    }else {
+        alert("error");
+    }}
+</script>
+</body>
+</html>

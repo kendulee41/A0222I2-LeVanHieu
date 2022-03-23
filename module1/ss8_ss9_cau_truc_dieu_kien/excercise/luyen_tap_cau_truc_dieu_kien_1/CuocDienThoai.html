@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+<!--    600 đồng cho mỗi gọi của 50 phút đầu tiên.-->
+<!--    400 đồng cho mỗi phút gọi của 150 phút tiếp theo.-->
+<!--    200 đồng cho bất kỳ mỗi phút nào sau 200 phút đầu tiên.-->
+    <form>
+        <p>Nhập số phút:</p>
+        <input type="text" id="minutes"/>
+        <input type="button" value="Tính cước" onclick="play();"/>
+        <p id="result"></p>
+    </form>
+    <script>
+        function play() {
+            let minutes = parseInt(document.getElementById('minutes').value);
+            let freight;
+            if (minutes>200){
+                freight = 600 * 50+150*400+200*(minutes-200);
+            }else if (minutes>50){
+                freight = 600 * 50 + 400 * (minutes-50);
+            }else {
+                freight = 600* minutes;
+            }
+            document.getElementById('result').innerHTML= "Cước của bạn là: "+freight +"$";
+        }
+    </script>
+</body>
+</html>
