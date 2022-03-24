@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ĐỔi độ C sang độ F</title>
+</head>
+<body>
+    <form>
+        <p >Nhập số met:</p>
+        <input type="text" id="met"/>
+        <input type="button" value="Đổi" onclick="play();"/>
+        <p id="result" ></p>
+
+    </form>
+    <script>
+        function play(){
+            let met = parseInt(document.getElementById('met').value);
+            let t = met /1;
+            if (t==met){
+                let f = met * 3.2808;
+                document.getElementById('result').innerHTML = f + " feet";
+            }else {
+                alert("error");
+            }}
+    </script>
+</body>
+</html>

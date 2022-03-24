@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+    <style>
+        input{
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" id="a" placeholder="(a)"/>&nbsp;x+
+        <input type="text" id="b" placeholder="(b)"/>&nbsp;=&nbsp;0
+        <input style="width: 50px" type="button" value="Giải" onclick="play();"/>
+        <p id="result" ></p>
+    </form>
+    <script>
+        function play() {
+            let a = parseInt(document.getElementById('a').value);
+            let b = parseInt(document.getElementById('b').value);
+            let t = (a+b)/1;
+            if (t==a+b){
+                if (a==0){
+                    if (b!=0){
+                        document.getElementById('result').innerHTML= 'Phương trình vô nghiệm';
+                }else if (b==0){
+                    document.getElementById('result').innerHTML= 'Phương trình vô số nghiệm';
+                }}
+                else {
+                    let x = -b/a;
+                    document.getElementById('result').innerHTML= 'Pt có nghiệm x=' +x;
+                }
+            }else {
+                alert('Error');
+            }
+        }
+    </script>
+
+</body>
+</html>

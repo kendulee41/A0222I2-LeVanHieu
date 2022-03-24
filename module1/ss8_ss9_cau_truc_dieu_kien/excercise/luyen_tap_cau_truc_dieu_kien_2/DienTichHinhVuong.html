@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình vuông</title>
+</head>
+<body>
+<form>
+    <p >Nhập chiều dài a:</p>
+    <input type="text" id="a"/>
+    <input type="button" value="Tính" onclick="play();"/>
+    <p id="result" ></p>
+
+</form>
+<script>
+    function play(){
+        let a = parseInt(document.getElementById('a').value);
+        let t = a /1;
+        if (t==a ){
+            if (a>0){
+            let S = a*a;
+            document.getElementById('result').innerHTML = 'Diện tích là :' +S ;}
+            else {
+                alert("error");}
+        }else {
+            alert("error");
+        }}
+</script>
+</body>
+</html>

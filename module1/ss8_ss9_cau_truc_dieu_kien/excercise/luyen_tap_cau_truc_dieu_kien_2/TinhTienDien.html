@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền điện</title>
+</head>
+<body>
+    <script>
+        let electric = parseInt(prompt('Nhập số điện: '));
+        let b1 = 1678;
+        let b2 = 1734;
+        let b3 = 2014;
+        let b4 = 2536;
+        let b5 = 2834;
+        let b6 = 2927;
+        let money ;
+        if (electric>400){
+            money = (50*b1+50*b2+50*b3+50*b4+50*b5+(electric-400)*b6);
+        }else if (electric>300){
+            money = (50*b1+50*b2+50*b3+50*b4+(electric-300)*b5);
+        }else if (electric>200){
+            money = (50*b1+50*b2+50*b3+(electric-200)*b4);
+        }else if (electric>100){
+            money = (50*b1+50*b2+(electric-100)*b3);
+        }else if (electric>50){
+            money = (50*b1+(electric-100)*b2);
+        }else {
+            money = (electric-50)*b1;
+        }
+        alert('Số tiền điện: '+money);
+    </script>
+</body>
+</html>
