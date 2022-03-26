@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giai thừa</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt('Nhập số muốn tính giai thừa: '));
+    let i = 1;
+    let core = 1;
+    while (i <= number) {
+        core *= i;
+        i++;
+    }
+    document.write(number + '! = ' + core);
+</script>
+</body>
+</html>

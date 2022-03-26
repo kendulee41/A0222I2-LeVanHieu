@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ Hình chữ nhật</title>
+</head>
+<body>
+<script>
+    for (let row =1;row<=7;row++){
+        if (row===1||row===7){
+            for (let col =1;col<=21;col++){
+                document.write('*&nbsp');
+            }
+        }else {
+            for (let col =1;col<=21;col++){
+                if (col===1||col===21){
+                    document.write('*&nbsp');
+                }else {
+                    document.write('&nbsp&nbsp&nbsp');
+                }
+            }
+        }
+        document.write('<br>');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Temperature</title>
+</head>
+<body>
+<script>
+    let temp = parseInt(prompt('Enter Temperature:'));
+    while (true) {
+        if (temp > 100) {
+            temp = parseInt(prompt('Reduce the Temperature: '))
+        } else if (temp < 20) {
+            temp = parseInt(prompt('Increased Temperature: '));
+        } else {
+            break;
+        }
+        document.write('Temperature: ' + temp);
+    }
+</script>
+</body>
+</html>

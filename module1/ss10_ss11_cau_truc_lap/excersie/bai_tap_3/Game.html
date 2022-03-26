@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hãy thử đoán xem</title>
+</head>
+<body>
+<form>
+    <button type="button" onclick="play();">Chơi</button>
+    <script>
+        function play() {
+            let count = 1;
+            let n1 = parseInt(prompt('From:'));
+            let n2 = parseInt(prompt('To:'));
+            let random = Math.floor(Math.random() * (n2 - n1 + 1) + n1);
+            do {
+                let number = parseInt(prompt('Guess:'));
+                if (number === random) {
+                    alert('Chúc mừng' + '<br>' + 'Kết thúc lượt chơi');
+                    break;
+                } else if (number > random) {
+                    alert('lựa chọn của bạn lớn hơn rồi, hãy chọn lại');
+                } else {
+                    alert('lựa chọn của bạn bé hơn rồi, hãy chọn lại');
+                }
+                count++;
+                if (count > 3) {
+                    alert('Bạn đã hết lượt, vui lòng chơi lại!');
+                    break;
+                }
+            } while (true);
+        }
+    </script>
+</form>
+</body>
+</html>

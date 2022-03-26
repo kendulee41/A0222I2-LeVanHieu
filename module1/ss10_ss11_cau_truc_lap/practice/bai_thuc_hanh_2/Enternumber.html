@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter number</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt('Enter number'));
+    document.write(number + '<br>');
+    let total = 0;
+    while (number !== -1) {
+        total = total + number;
+        number = parseInt(prompt('Enter number'));
+        document.write(number + '<br>');
+    }
+    document.write('Total: ' + total);
+</script>
+</body>
+</html>

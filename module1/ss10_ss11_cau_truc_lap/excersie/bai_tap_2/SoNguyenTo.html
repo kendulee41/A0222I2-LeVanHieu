@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số nguyên tố</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let i = 2;
+    while (count < 20) {
+        let j = 1;
+        let g = 0;//biến trung gian
+        while (j <= i) {
+            if (i % j == 0) {
+                g++;
+            }
+            j++;
+            if (g > 3) {//Tối ưu code
+                break;
+            }
+        }
+        if (g < 3) {
+            document.write(i + '<br>');
+            count++;
+        }
+        i++;
+    }
+</script>
+</body>
+</html>
