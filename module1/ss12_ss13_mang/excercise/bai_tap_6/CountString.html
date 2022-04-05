@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm từ trong mảng</title>
+</head>
+<body>
+<script>
+    let arr = ['1', 'a', '3', 'r', '5'];
+    let count = 0;
+    for (let index = 0; index < arr.length; index++) {
+        if (isNaN(arr[index])) {
+            count++;
+        }
+    }
+    document.write(count);
+</script>
+</body>
+</html>

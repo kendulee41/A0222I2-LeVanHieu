@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra 2 chuỗi</title>
+</head>
+<body>
+<script>
+    let lengthA = parseInt(prompt('Độ dài mảng 1:'));
+    let arrA = new Array(lengthA);
+    for (let i = 0;i<lengthA;i++){
+        arrA[i] = prompt('Array 1 ['+i+']: ');
+    }
+    let lengthB = parseInt(prompt('Độ dài mảng 2:'));
+    let arrB = new Array(lengthB);
+    for (let i = 0;i<lengthB;i++){
+        arrB[i] = prompt('Array 2 ['+i+']: ');
+    }
+    document.write('Array 1: '+arrA.toString()+'<br>');
+    document.write('Array 2: '+arrB.toString()+'<br>');
+    if (lengthB!==lengthA){
+        document.write('Array 1 # Array B');
+    }else {
+        let check = true;
+        for (let index =0;index<arrA.length;index++){
+            if (arrA[index]!==arrB[index]){
+                check = false;
+            }
+        }
+        if (check){
+            document.write('Array 1 // Array 2');
+        }else {
+            document.write('Array 1 # Array B');
+        }
+    }
+</script>
+</body>
+</html>

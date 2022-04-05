@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm dấu - thay bằng dấu _</title>
+</head>
+<body>
+<script>
+    let length = parseInt(prompt('Độ dài mảng:'));
+    let arr = new Array(length);
+    for (let i = 0;i<length;i++){
+        arr[i] = prompt('Phần tử '+i+': ');
+    }
+    document.write('Mảng ban đầu : '+arr.toString()+'<br>');
+    for (let index = 0;index<arr.length;index++){
+        if (arr[index]==='-'){
+            arr[index]='_';
+        }
+    }
+    document.write('Mảng sau khi chuyển đổi : '+arr.toString()+'<br>');
+</script>
+</body>
+</html>
