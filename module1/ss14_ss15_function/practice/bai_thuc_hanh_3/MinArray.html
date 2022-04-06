@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Min Array</title>
+</head>
+<body>
+<script>
+    let arr1 = [3, 5, 1, 8, -3, 7, 8];
+    let arr2 = [7, 12, 6, 9, 20, 56, 89];
+    let arr3 = [];
+    let arr4 = [0, 0, 0, 0, 0, 0];
+    function minArray(arr) {
+        if(arr.length === 0)
+            return -1;
+        let indexmin = 0;
+
+        for(let i = 1; i < arr.length; i++){
+            if(arr[i] < arr[indexmin]){
+                indexmin = i;
+            }
+        }
+        return indexmin;
+    }
+    let index;
+    index = minArray(arr1);
+    if (index ===-1){
+        document.write('Array 1 null'+'<br>');
+    }else {
+        document.write('Min array 1: '+arr1[index]+'<br>');
+    }
+    index = minArray(arr2);
+    if (index ===-1){
+        document.write('Array 2 null'+'<br>');
+    }else {
+        document.write('Min array 2: '+arr2[index]+'<br>');
+    }
+    index = minArray(arr3);
+    if (index ===-1){
+        document.write('Array 3 null'+'<br>');
+    }else {
+        document.write('Min array 3: '+arr3[index]+'<br>');
+    }
+    index = minArray(arr4);
+    if (index ===-1){
+        document.write('Array 4 null'+'<br>');
+    }else {
+        document.write('Min array 4: '+arr4[index]+'<br>');
+    }
+</script>
+</body>
+</html>

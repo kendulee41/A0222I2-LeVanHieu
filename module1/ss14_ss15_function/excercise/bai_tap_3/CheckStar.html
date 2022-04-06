@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Star</title>
+</head>
+<body>
+<script>
+    let arrStar = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
+    let arrConstellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    function checkStar(str) {
+        for (let index =0;index<arrStar.length;index++){
+            if (str===arrStar[index]){
+                return arrConstellation[index];
+            }
+        }
+        return -1;
+    }
+    let input = prompt('Enter name Star: ');
+    if (checkStar(input)===-1){
+        alert('Not found!!!');
+    }else {
+        alert('Name Constellation: '+checkStar(input));
+    }
+</script>
+</body>
+</html>

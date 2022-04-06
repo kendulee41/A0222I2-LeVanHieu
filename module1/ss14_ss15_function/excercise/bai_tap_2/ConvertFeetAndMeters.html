@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<input type="text" id="input">
+<select id="in">
+    <option selected>Feet</option>
+    <option>Meters</option>
+</select>
+<select id="out">
+    <option selected>Meters</option>
+    <option>Feet</option>
+</select>
+<button type="button" onclick="convert();">Convert</button>
+<b id="result"></b>
+</body>
+</html>
+<script>
+    let number = parseFloat(document.getElementById('input').value);
+    function convertTo(parameter,coefficient) {
+        return parameter*coefficient;
+    }
+    function convert() {
+        let number = document.getElementById('input').value;
+        let inp = document.getElementById('in').value;
+        let out = document.getElementById('out').value;
+        if (inp===out){
+            document.getElementById('result').innerHTML=number;
+        }else  if (inp==='Feet'){
+                document.getElementById('result').innerHTML=convertTo(number,0.305);
+            }else{
+            document.getElementById('result').innerHTML=convertTo(number,3.279);
+        }
+    }
+</script>
