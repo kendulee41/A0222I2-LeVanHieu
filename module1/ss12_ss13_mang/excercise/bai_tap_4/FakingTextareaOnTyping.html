@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Ứng dụng vui Faking Textarea on Typing</title>
 </head>
-<body>
-$END$
+<body style="text-align: center">
+<h2>Type anthing slowly</h2>
+<textarea style="width: 300px;height: 100px" id="input" onkeydown="display()"></textarea>
 </body>
 </html>
+<script>
+    function display() {
+        let str = 'You so beautiful!';
+        let output = '';
+        let input = document.getElementById('input').value;
+        for (let i = 0; i < input.length; i++) {
+            output = output + str[i];
+            if (str[i] === '!') {
+                output = '';
+            }
+        }
+        document.getElementById('input').value = output;
+        setTimeout('display()',1);
+    }
+</script>

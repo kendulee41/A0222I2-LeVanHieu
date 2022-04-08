@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check have Symbol?</title>
+</head>
+<body>
+<script>
+    function checkHaveSuymbol(str,sym) {
+        let count = 0;
+        for (let i=0;i<str.length;i++){
+            if (str[i]===sym){
+                count++;
+            }
+        }
+        if (count===0){
+            return -1;
+        }else {
+            return count;
+        }
+    }
+    let arr = ['a','b','c','a','w','s'];
+    let sym = prompt('Enter symbol: ');
+    if (checkHaveSuymbol(arr,sym)===-1){
+        document.write('Not symbol in Array');
+    }else {
+        document.write('have '+checkHaveSuymbol(arr,sym)+' symbol in Array');
+    }
+</script>
+</body>
+</html>

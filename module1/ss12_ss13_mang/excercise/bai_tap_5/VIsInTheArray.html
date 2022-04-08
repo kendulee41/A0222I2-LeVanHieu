@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>V is in the array</title>
 </head>
 <body>
-$END$
+<script>
+    let arr = [2,5,6,7,31,8,9,15,17,20];
+    let numberV = parseInt(prompt('Enter number V:'));
+    for (let index =0;index <arr.length;index++){
+        if (numberV===arr[index]){
+            document.write('V is in the array');
+            break;
+        }
+        if (index===arr.length-1){
+            document.write('V is not in the array');
+        }
+    }
+</script>
 </body>
 </html>

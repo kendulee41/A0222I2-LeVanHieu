@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>isNum?</title>
+</head>
+<body>
+<script>
+    function checkIsNum(num){
+        if (!isNaN(num)){
+            return true;
+        }else {
+            return false;
+        }
+    }
+    let str = prompt('Enter: ');
+    if (checkIsNum(str)){
+        document.write('Is number');
+    }else {
+        document.write('Not number');
+    }
+</script>
+</body>
+</html>

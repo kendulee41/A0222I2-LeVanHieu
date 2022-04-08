@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tăng giá trị</title>
+</head>
+<body onload="display()">
+<script>
+    function display() {
+        let number = parseInt(prompt('Enter number:'));
+        let num = increase(number);
+        document.write(num);
+    }
+    function increase(number) {
+        return ++number;
+    }
+</script>
+</body>
+</html>

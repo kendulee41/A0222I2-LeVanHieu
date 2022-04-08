@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Từ điển</title>
+    <style>
+        input{
+            width: 200px;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
-$END$
+<input type="text" id="input"/>
+<button type="button" onclick="display()">Dịch</button>
+<input type="text" id="output" value=""/>
+<script>
+    function display() {
+        let eL = ['hello','goodbye','good','sad','love'];
+        let vN = ['xin chào','tạm biệt','tốt','buồn','yêu'];
+        let input = document.getElementById('input').value;
+        for (let i=0;i<=eL.length;){
+            if (input===eL[i]){
+                document.getElementById('output').value= vN[i];
+                break;
+            }else if (input===vN[i]){
+                document.getElementById('output').value = eL[i];
+                break;
+            }
+            i++
+            if (i===eL.length) {
+                document.getElementById('output').value = 'Not found';
+            }
+        }
+    }
+</script>
 </body>
 </html>

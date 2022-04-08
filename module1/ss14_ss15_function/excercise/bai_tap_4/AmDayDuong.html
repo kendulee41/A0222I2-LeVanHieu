@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Âm hay Dương</title>
+</head>
+<body>
+<script>
+    function checkAmDuong(num) {
+        if (num%1==0){
+            if (num>0){
+                return true;
+            }else if (num<0){
+                return false;
+            }
+        }else {
+            return -1
+        }
+    }
+    let num = prompt('ENter number: ');
+    if (checkAmDuong(num) ===-1){
+        document.write('Không phải số nguyên')
+    }else if (checkAmDuong(num)){
+        document.write('Số Nguyên Dương')
+    }else {
+        document.write('Số nguyên âm');
+    }
+</script>
+</body>
+</html>

@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Số lớn nhất</title>
 </head>
 <body>
-$END$
+<script>
+    let int = [11,4,7,33,6,65,1,2,9,10];
+    document.write(int+'<br>');
+    let max = int[0];
+    let index = 0;
+    for (let i=1;i<10;i++){
+        if (int[i]>max){
+            max=int[i];
+            index = i;
+        }
+    }
+    document.write('Max = '+max+'<br/> ở vị trí '+index);
+</script>
 </body>
 </html>

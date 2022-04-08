@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Min 3 số</title>
+</head>
+<body>
+<script>
+    function findMinNum(num1,num2,num3) {
+        let temp = num1;
+        if (num2<temp){
+            temp = num2;
+        }
+        if (num3<temp){
+            temp = num3;
+        }
+        return temp;
+    }
+    let number1= parseInt(prompt('Enter num 1:'));
+    let number2= parseInt(prompt('Enter num 2:'));
+    let number3= parseInt(prompt('Enter num 3:'));
+    document.write('Min: '+findMinNum(number1,number2,number3));
+</script>
+</body>
+</html>

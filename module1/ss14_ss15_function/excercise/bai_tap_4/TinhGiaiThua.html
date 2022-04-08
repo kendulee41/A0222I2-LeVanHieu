@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Giai Thừa</title>
+</head>
+<body>
+<script>
+    function tinhGT(number) {
+        let stage = 1;
+        for (let i=2;i<=number;i++){
+            stage*=i;
+        }
+        return stage;
+    }
+    let number = parseInt(prompt('Enter number: '));
+    document.write(number+'! = '+tinhGT(number));
+</script>
+</body>
+</html>

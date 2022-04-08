@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích Chu vi hình trõn</title>
+</head>
+<body>
+<script>
+    const PI=3.14;
+    function diameterCircle(r) {
+        return 2*r*PI;
+    }
+    function acreageCircle(r) {
+        return r*r*PI;
+    }
+    let banKinh = parseInt(prompt('Nhập bán kính: '));
+    document.write('Chu vi hình tròn: '+diameterCircle(banKinh)) ;
+    document.write('<br>Diện tích hình tròn: '+acreageCircle(banKinh));
+</script>
+</body>
+</html>
