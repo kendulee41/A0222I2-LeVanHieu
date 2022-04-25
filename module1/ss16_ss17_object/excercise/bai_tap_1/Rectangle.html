@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle</title>
+</head>
+<body>
+<p id="dientich"></p>
+<p id="chuvi"></p>
+<canvas id="myCanvas" width="3000" height="1000"></canvas>
+
+<script>
+
+    class Rectangle {
+        constructor(cd, cr) {
+            this.cd = cd;
+            this.cr = cr;
+        }
+
+        setRectangle(cd, cr) {
+            this.cd = cd;
+            this.cr = cr;
+        }
+
+        tinhDienTich() {
+            return this.cd * this.cr;
+        }
+
+        tinhChuVi() {
+            return (this.cr + this.cd) * 2;
+        }
+
+        hienThi() {
+            var ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.beginPath();
+            let cd = this.cd;
+            let cr = this.cr;
+            ctx.rect(1, 1, cd, cr);
+            ctx.stroke();
+        }
+    }
+    let cd = parseInt(prompt('Nhập chiều dài; '));
+    let cr = parseInt(prompt('Nhập chiều rộng'));
+    let rectangle = new Rectangle(cd,cr);
+    rectangle.hienThi();
+    document.getElementById('dientich').innerHTML = 'Diện tích = '+rectangle.tinhDienTich();
+    document.getElementById('chuvi').innerHTML = 'Chu vi = '+ rectangle.tinhChuVi();
+</script>
+</body>
+</html>

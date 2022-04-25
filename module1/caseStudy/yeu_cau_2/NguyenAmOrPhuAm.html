@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra nguyên âm hay phụ âm</title>
+</head>
+<body>
+<input type="text" id="input"/>
+<input type="button" value="check" onclick="check()">
+<p id="result"></p>
+<script>
+    function check() {
+        let char = document.getElementById('input').value;
+        let arr = ['o','u','i','e','a'];
+        for (let i=0;i<arr.length;i++){
+            if (char===arr[i]||char===arr[i].toUpperCase()){
+                document.getElementById('result').innerHTML='Phụ âm';
+                break;
+            }else {
+                document.getElementById('result').innerHTML='Nguyên âm';
+            }
+        }
+    }
+</script>
+</body>
+</html>

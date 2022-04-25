@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam và Eva</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor(weight) {
+            this.weight = 10;
+        }
+        decrease(){
+            this.weight--;
+        }
+        isEmpty(){
+            if (this.weight===0){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        getWeight(){
+            return this.weight;
+        }
+        checkApple(){
+            if (this.isEmpty()){
+                return false;
+            }else {
+                return true;
+            }
+        }
+        setWeight(){
+            return this.weight;
+        }
+    }
+    class Human{
+        constructor(name,gender,weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        Human(){}
+        isMale(){
+            if(this.gender==='nam'){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        setGender(gender){
+            this.gender = gender;
+        }
+        eat(apple){
+            if (apple.checkApple()){
+                apple.decrease();
+                this.weight++;
+            }
+        }
+        say(){
+            document.write('Tôi tên '+this.name+', giới tính '+this.gender
+                +', cân nặng '+this.weight+', trái táo còn '+apple.setWeight()+' đv<br>');
+        }
+        getName(){
+            return this.name;
+        }
+        setName(name){
+            this.name = name;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        setWeight(weight){
+            this.weight = weight;
+        }
+
+    }
+    let apple = new Apple();
+    let aDam = new Human('Adam','Nam',23)
+    let eVa = new Human('Eva','Nữ',20);
+    aDam.say();
+    eVa.say();
+    document.write('<hr>');
+    aDam.eat(apple);
+    aDam.say();
+    eVa.eat(apple);
+    eVa.say();
+</script>
+</body>
+</html>

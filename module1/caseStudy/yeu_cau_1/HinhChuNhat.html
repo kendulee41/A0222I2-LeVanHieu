@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ hình chữ nhật</title>
+</head>
+<body>
+<script>
+    let chieudai = parseInt(prompt('Nhập chiều dài: '));
+    let chieurong = parseInt(prompt('Nhập chiều rộng: '));
+    for (let i =1;i<=chieudai;i++){
+        if (i===1||i===chieudai){
+            for (let j=1;j<=chieurong;j++){
+                document.write('*');
+            }
+        }else {
+            for (let j=1;j<=chieurong;j++){
+                if (j===1||j===chieurong){
+                    document.write('*');
+                }else {
+                    document.write('&nbsp&nbsp');
+                }
+            }
+        }
+        document.write('<br>');
+    }
+</script>
+</body>
+</html>

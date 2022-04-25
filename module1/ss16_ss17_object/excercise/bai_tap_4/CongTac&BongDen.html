@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Công tắc & bóng đèn</title>
+</head>
+<body>
+<script>
+
+    class ElectricLamp{
+        constructor(status) {
+            this.status = false;
+        }
+        ElectricLamp(){}
+        turnON(){
+            if (this.status){
+                document.write('Đèn đang bật<hr>');
+            }
+            }
+        turnOff(){
+            document.write('Đèn đang tắt<hr>')
+        }
+    }
+    class SwitchButton{
+        constructor(status,lamp) {
+            this.status = false;
+            this.lamp = lamp;
+        }
+        SwitchButton(){}
+        connectToLamp(){
+            this.lamp.status = true;
+        }
+        switchOn(){
+            document.write('Công tắc đã bật<br>');
+            this.status = true;
+            this.lamp.turnON();
+        }
+        switchOff(){
+            document.write('Công tắc đã tắt<br>');
+            this.status = false;
+            this.lamp.turnOff();
+        }
+    }
+    let electricLamp = new ElectricLamp();
+    let switchButton =  new SwitchButton(false,electricLamp);
+    switchButton.connectToLamp();
+    switchButton.switchOn();
+    switchButton.switchOff();
+</script>
+</body>
+</html>

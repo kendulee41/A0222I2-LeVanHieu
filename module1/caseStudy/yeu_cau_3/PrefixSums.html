@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prefix Sums</title>
+</head>
+<body>
+<script>
+    let leng = parseInt(prompt('Độ dài của mảng a :'));
+    let arrA = new Array(leng);
+    for (let i = 0; i < leng; i++) {
+        arrA[i] = parseInt(prompt('array_a[' + i + ']'));
+    }
+    document.write('array a= ' + arrA+'<hr>');
+    let arrB = new Array(leng);
+    let count = 0;
+    for (let i = 0; i < leng; i++) {
+        count += arrA[i];
+        arrB[i] = count;
+    }
+    document.write('array b= ' + arrB);
+</script>
+</body>
+</html>

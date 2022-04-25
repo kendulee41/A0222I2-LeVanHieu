@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<input type="text" id="fahrenheit" placeholder="Đổi Celsius sang Fahrenheit"/>
+<p id="resultF"></p>
+<input type="text" id="kenvin" placeholder="Đổi Celsius sang Kenvin"/>
+<p id="resultK"></p>
+<input type="button" onclick="display()" value="Đổi">
+<script>
+    class Temperature{
+        constructor(temp) {
+            this.temp = temp;
+        }
+        checkCel(){
+            if (this.temp<-273){
+                alert('lỗi')
+            }
+        }
+        convertCToF(){
+            return (9*this.temp)/5+32;
+        }
+        convertCToK(){
+            return this.temp+273.15;
+        }
+    }
+    function display() {
+        let fah = parseInt(document.getElementById('fahrenheit').value);
+        let ken = parseInt(document.getElementById('kenvin').value);
+        let temperature1 = new Temperature(fah);
+        let temperature2 = new Temperature(ken);
+        temperature1.checkCel();
+        document.getElementById('resultF').innerHTML = temperature1.convertCToF();
+        document.getElementById('resultK').innerHTML = temperature2.convertCToK();
+    }
+</script>
+</body>
+</html>

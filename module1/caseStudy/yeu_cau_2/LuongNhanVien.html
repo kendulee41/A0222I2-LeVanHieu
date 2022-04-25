@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lương nhân viên</title>
+</head>
+<body>
+<input type="text" id="luong" placeholder="Nhập lương nhân viên"/>
+<input type="button" onclick="display()" value="Tính lương">
+<p id="thue"></p>
+<p id="luongrong"></p>
+<script>
+    function display() {
+        let luong = parseInt(document.getElementById('luong').value);
+        let thue = 0.2;
+        if (luong<15000000&&luong>=7000000){
+            thue = 0.1;
+        }
+        if (luong<7000000){
+            thue = 0.05;
+        }
+        let luongrong = luong-(luong*thue);
+        document.getElementById('thue').innerHTML='Thuế: '+(thue*100)+'%';
+        document.getElementById('luongrong').innerHTML='Số tiền nhận được: '+luongrong+' VNĐ';
+    }
+</script>
+</body>
+</html>
