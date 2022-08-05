@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Common Character Count</title>
 </head>
 <body>
-$END$
+<input type="text" id="character1"/>
+<input type="text" id="character2"/>
+<input type="button" value="check" onclick="display()">
+<p id="result"></p>
+<script>
+    function display() {
+        let char1 = document.getElementById('character1').value;
+        let char2 = (document.getElementById('character2').value).split('');
+        let common = '';
+        for (let i=0;i<char1.length;i++){
+                let temp = char2.indexOf(char1[i]);
+                if (temp!==-1){
+                    common+=char1[i];
+                    char2.splice(temp,1);
+                }
+        }
+        common = common.split("");
+        document.getElementById('result').innerHTML='Có '+common.length+' kí tự chung là '+common;
+    }
+</script>
 </body>
 </html>

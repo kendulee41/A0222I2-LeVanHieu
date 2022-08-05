@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Min Max</title>
 </head>
 <body>
-$END$
+<script>
+    function checkMin(arr){
+        let min = arr[0][0];
+        for (let i=0;i<m;i++){
+            for (let j=0;j<n;j++){
+                if (arr[i][j]<min){
+                    min=arr[i][j];
+                }
+            }
+        }
+        return min;
+    }
+    function checkMax(arr){
+        let max = arr[0][0];
+        for (let i=0;i<m;i++){
+            for (let j=0;j<n;j++){
+                if (arr[i][j]>max){
+                    max=arr[i][j];
+                }
+            }
+        }
+        return max;
+    }
+    let m =parseInt(prompt('Nhập m'));
+    let n =parseInt(prompt('Nhập n'));
+    let arr = new Array(m);
+    for (let i=0;i<m;i++){
+        arr[i] = new Array(n);
+        for (let j=0;j<n;j++){
+            arr[i][j] = parseInt(prompt('Array['+i+']['+j+']='));
+        }
+    }
+    alert('min: '+checkMin(arr)+', max: '+checkMax(arr));
+</script>
 </body>
 </html>

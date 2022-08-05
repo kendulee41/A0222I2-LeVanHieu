@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Cau 3</title>
 </head>
 <body>
-$END$
+<script>
+    function checkSoNguyenTo(arr) {
+        let result = [];
+        for (let i = 0; i < arr.length; i++) {
+            let count =0;
+            for (let j = 1; j <= arr[i]; j++) {
+                if (arr[i] % j === 0) {
+                    count++;
+                }
+            }
+            if (count === 2) {
+                result.push(arr[i]);
+            }
+        }
+        return result;
+    }
+
+    let arr = [1,5,6,23,8,47,10,3,2,3];
+    // let leng = parseInt(prompt('nhập độ dài của mảng'));
+    // for (let i = 0; i < leng; i++) {
+    //     arr[i] = parseInt(prompt('Arr[' + i + ']='));
+    // }
+    let temp;
+    document.write('Mảng của bạn: ' + arr + '<br>');
+    let result = checkSoNguyenTo(arr);
+    for (let i = 0; i < arr.length; i++) {
+        for (let j=0;j<arr.length;j++){
+            if (result[i]<result[j]){
+                temp=result[i];
+                result[i]=result[j];
+                result[j]=temp;
+            }
+        }
+    }
+    document.write('Mảng các số nguyên tố: '+result);
+</script>
 </body>
 </html>

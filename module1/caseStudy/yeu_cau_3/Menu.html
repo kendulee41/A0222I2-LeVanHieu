@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Menu</title>
 </head>
 <body>
-$END$
+<h1>MENU</h1>
+<p>1.Cafe <br>2.Cam vắt<br>3.Nước ép cà rốt<br>4.Nước ép cà chua<br>5.Nước lọc<br>6.Nước dừa<br>7.Thoát</p>
+<input type="button" onclick="display()" value="Order">
+<p id="result"></p>
+<script>
+    function display() {
+        let donGia = [15000, 20000, 22000, 22000, 10000, 15000];
+        let total =0;
+        do {
+            var input = parseInt(prompt('Nhập lựa chọn: '));
+            if (input===7){
+                break;
+            }else {
+                let number = parseInt(prompt('Đơn giá: ' + donGia[input-1] + ',    Nhập số lượng: '));
+                total += number * donGia[input-1];
+            }
+        }while (true);
+        document.getElementById('result').innerHTML = 'Tổng tiền: '+total+' VNĐ';
+    }
+</script>
 </body>
 </html>

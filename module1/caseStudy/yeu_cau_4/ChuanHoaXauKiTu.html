@@ -2,9 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Chuẩn hóa xâu kí tự</title>
 </head>
 <body>
-$END$
+<input type="text" id="input"/>
+<input type="button" value="chuẩn hóa" onclick="display()">
+<p id="result1"></p>
+<p id="result2"></p>
+<script>
+    function convert(arr){
+        arr = arr.trim();
+        arr = arr.toLowerCase();
+        let result = arr[0].toUpperCase();
+        for (let i=1;i<arr.length;i++){
+            if (arr[i]===' '&&arr[i+1]===' '){
+                continue;
+                }else if (arr[i]===' '){
+                    result+=arr[i];
+                    result+=arr[i+1].toUpperCase();
+                    i++;
+                } else {
+                result+=arr[i];
+            }
+        }
+        return result;
+    }
+    function timTuDaiNhat(arr){
+        let str =[];
+        let a ='';``
+        for (let i=0;i<arr.length;i++){
+            if (arr[i]!==' '){
+                a+=arr[i];
+            }else {
+                str.push(a);
+                a='';
+            }
+            if (i===arr.length-1){
+                str.push(a);
+            }
+        }
+        let max = str[0];
+        for (let i=1;i<str.length;i++){
+            if (str[i].length>max.length){
+                max = str[i];
+            }
+        }
+        return max;
+    }
+    function display() {
+        let arr = document.getElementById('input').value;
+        arr = convert(arr);
+        document.getElementById('result1').innerHTML='Xâu chuỗi chuẩn hóa: '+arr;
+        document.getElementById('result2').innerHTML='Từ dài nhất: '+timTuDaiNhat(arr);
+    }
+</script>
 </body>
 </html>

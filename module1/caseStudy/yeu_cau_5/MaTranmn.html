@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Ma trận m,n</title>
 </head>
 <body>
-$END$
+<script>
+    function totalSoChan(arr){
+        let total =0;
+        for (let i=0;i<arr.length;i++){
+            for (let j=0;j<arr[i].length;j++){
+                if (arr[i][j]%2===0){
+                    total+=arr[i][j];
+                }
+            }
+        }
+        return total;
+    }
+    let m =parseInt(prompt('Nhập m'));
+    let n =parseInt(prompt('Nhập n'));
+    let arr = new Array(m);
+    for (let i=0;i<m;i++){
+        arr[i] = new Array(n);
+        for (let j=0;j<n;j++){
+            arr[i][j] = parseInt(prompt('Array['+i+']['+j+']='));
+        }
+    }
+    alert(totalSoChan(arr));
+</script>
 </body>
 </html>
+

@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Câu 2</title>
 </head>
 <body>
-$END$
+<script>
+    function countUppercase(str) {
+        let count = 0;
+        let temp;
+        for (let i = 0; i < str.length; i++) {
+            temp = str[i].toUpperCase();
+            if (str[i] === temp) {
+                count++;
+            }
+        }
+        if (count > 0) {
+            return count;
+        } else {
+            return "The Strings is not contain upper char";
+        }
+    }
+
+    let str = prompt('Nhập chuỗi kí tự:');
+    document.write(countUppercase(str));
+</script>
 </body>
 </html>

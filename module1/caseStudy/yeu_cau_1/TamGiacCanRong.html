@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Tam Giác Cân Rỗng</title>
 </head>
 <body>
-$END$
+<script>
+    let h = parseInt(prompt('Nhập chiều cao: '));
+    for (let i=1;i<=h;i++){
+        for (let j=h;j>i;j--){
+            document.write('&nbsp&nbsp');
+        }
+        if (i!==h){
+            for (let k=1;k<=i*2-1;k++){
+                if (k===1||k===i*2-1){
+                    document.write('*');
+                } else {
+                    document.write('&nbsp&nbsp');
+                }
+            }
+        }else {
+            for (let k=0;k<i*2-1;k++){
+                document.write('*');
+            }
+        }
+        document.write('<br>');
+    }
+</script>
 </body>
 </html>

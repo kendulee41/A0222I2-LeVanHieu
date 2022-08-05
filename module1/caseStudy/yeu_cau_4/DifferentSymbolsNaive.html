@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Different Symbols Naive</title>
 </head>
 <body>
-$END$
+<input type="text" id="input"/>
+<input type="button" value="check" onclick="display()">
+<p id="result"></p>
+<script>
+    function display() {
+        let string = document.getElementById('input').value;
+        let result =string[0];
+        for (let i=1;i<string.length;i++){
+            let check =result.indexOf(string[i])
+            if (check===-1){
+                result += string[i];
+            }
+        }
+        result = result.split("");
+        document.getElementById('result').innerHTML = 'Có ' +result.length+' kí tự khác nhau là: '+result;
+    }
+</script>
 </body>
 </html>

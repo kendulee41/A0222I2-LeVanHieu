@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Max Fraction</title>
 </head>
 <body>
-$END$
+<script>
+    let numerators = [5, 2, 8, 5];
+    let denominators = [6, 3, 3, 4];
+    let temp = numerators[0] / denominators[0];
+    let index = 0;
+    for (let i = 1; i < numerators.length; i++) {
+        if (numerators[i] / denominators[i] > temp) {
+            temp = numerators[i] / denominators[i];
+            index = i;
+        }
+    }
+    document.write('Phân số lớn nhất là: ' + numerators[index] + '/' + denominators[index]
+        + '<br>Chỉ số: ' + index);
+</script>
 </body>
 </html>

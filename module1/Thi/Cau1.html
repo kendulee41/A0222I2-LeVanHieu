@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Câu 1</title>
 </head>
 <body>
-$END$
+<script>
+    let arr = [];
+    let leng = parseInt(prompt('nhập độ dài của mảng'));
+    let sumchan =0;
+    let sumle=0;
+    while (leng>20){
+        alert('Độ dài <=20, vui lòng nhập lại');
+        leng = parseInt(prompt('nhập độ dài của mảng'));
+    }
+    for (let i = 0; i < leng; i++) {
+        arr[i] = parseInt(prompt('Arr[' + i + ']='));
+        if (arr[i]%2===0){
+            sumchan+=arr[i];
+        }else {
+            sumle+=arr[i];
+        }
+    }
+    document.write('Mảng của bạn: ' + arr + '<br>');
+    document.write('Hiệu của tổng chẳn & tổng lẻ:'+(sumchan-sumle));
+</script>
 </body>
 </html>

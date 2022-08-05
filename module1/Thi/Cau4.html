@@ -2,9 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Câu 4</title>
 </head>
 <body>
-$END$
+<script>
+    class Telephone {
+        constructor(iD, name, hangSX, gia) {
+            this.iD = iD;
+            this.name = name;
+            this.hangSX = hangSX;
+            this.gia = gia;
+        }
+        getID(){
+            return this.iD;
+        }
+        setID(iD){
+            this.iD = iD;
+        }
+        getName(){
+            return this.name;
+        }
+        setName(name){
+            this.name = name;
+        }
+        getHangSX(){
+            return this.hangSX;
+        }
+        setHang(hangSX){
+            this.hangSX = hangSX;
+        }
+        getGia(){
+            return this.gia;
+        }
+        setGia(gia){
+            this.gia = gia;
+        }
+        toString(){
+            document.write('ID: '+this.iD+'<br>Tên: '+this.name+'<br>Hãng: '+this.hangSX+'<br>Giá: '+this.gia);
+        }
+    }
+    let arr = [];
+    let leng = parseInt(prompt('Bạn muốn thêm bao nhiêu điện thoại:'));
+    for (let i=1;i<=leng;i++){
+        let id = prompt('Nhập mã máy '+i);
+        let name = prompt('Nhập tên máy '+i);
+        let hang = prompt('Nhập hãng máy '+i);
+        let money = prompt('Nhập giá máy '+i);
+        arr[i-1] = new Telephone(id,name,hang,money);
+    }
+    let temp = new Telephone();
+    for (let i=0;i<leng;i++){
+        for (let j=0;j<leng;j++){
+            if (arr[i].getName()<arr[j].getName()){
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+    for (let i=0;i<leng;i++){
+        arr[i].toString();
+        document.write('<hr>');
+    }
+</script>
 </body>
 </html>

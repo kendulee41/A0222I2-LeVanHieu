@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7f8bb4de-c822-433f-b8ae-f321ea203367" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../module1/Thi/Cau1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/Thi/Cau2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/Thi/Cau3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/Thi/Cau4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_1/TamGiacCanDac.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_1/TamGiacCanRong.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_3/MaxFraction.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_3/Menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_3/NumberToString.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_4/ChuanHoaXauKiTu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_4/CommonCharacterCount.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_4/DifferentSymbolsNaive.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_5/MaTranmn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_5/MinMax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_5/SoNguyenTo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_6/Vietlot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_7/GiaoDien.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module1/ss14_ss15_function/excercise/QuanLySanPham.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_1/TamGiacCan.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_1/TamGiacVuongCan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_3/MissingValue.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module1/caseStudy/yeu_cau_3/MissingValue.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="29FCqQc2FkXycycNRCk2f7EsRQF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f8bb4de-c822-433f-b8ae-f321ea203367" name="Default Changelist" comment="" />
+      <created>1652699636332</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652699636332</updated>
+      <workItem from="1652699637847" duration="277000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="462" y="105" key="FileChooserDialogImpl" timestamp="1652699920035">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1652699920035" />
+    <state x="65" y="0" key="new project wizard" timestamp="1652699923755">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1652699923755" />
+  </component>
+</project>
